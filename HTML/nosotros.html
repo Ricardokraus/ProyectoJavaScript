@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="../CSS/estilos.css"/>
+    <script defer src="../JS/script.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav id="nav1">
+            <a class="enlaces" href="inicio.html" draggable="false">Inicio</a>
+            <a class="enlaces" href="nosotros.html" draggable="false">Nosotros</a>
+            <a class="enlaces" href="#services" draggable="false">Servicios</a>
+            <a class="enlaces" href="#contact" draggable="false">Contacto</a>
+            <button id="botonNav" onclick="navBajar()"><img src="../IMG/flechaabajo.svg" alt="flecha abajo"
+                    draggable="false"></button>
+        </nav>
+    </header>
+    <aside id="nombre">
+        <h4>Ricardo Kraus</h4>
+    </aside>
+    <main>
+        <article id="container1" class="artOculto">
+            <figure class="artOculto">
+                <img draggable="false" src="../IMG/descarga (2).jpg">
+            </figure>
+        </article>
+        <article id="containers" class="artOculto">
+            <figure class="artOculto">
+                <img draggable="false" src="../IMG/descarga (1).jpg">
+            </figure>
+        </article>
+    </main>
+    <footer id="footer">
+        <box-icon name='chevron-up-circle' id="boxicon" color='#ffffff' draggable="false"
+            onclick="subirArriba()"></box-icon>
+    </footer>
+</body>
+
+</html>
