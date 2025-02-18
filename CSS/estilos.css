@@ -29,9 +29,6 @@ body {
     navigation: auto;
 }
 
-
-
-
 ::selection {
     background-color: rgba(245, 245, 245, 0.75);
     color: rgb(80, 80, 80);
@@ -59,14 +56,22 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 0;
     margin: 50px;
-    transition: all .5s ease;
 }
 
-@media (min-width: 100px) {
+@media screen and (min-width: 1922px) {
     main {
-        display: block;
+        display: inline-block;
+        animation: media 1s;
+    }
+}
+
+@keyframes media {
+    0% {
+        transform: translateY(-100px);
+    }
+    100% {
+        transform: translateY(0px);
     }
 }
 
