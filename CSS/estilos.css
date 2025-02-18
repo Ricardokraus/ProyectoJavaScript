@@ -29,6 +29,13 @@ body {
     navigation: auto;
 }
 
+@media (max-width: 1250px) {
+    article {
+        margin-inline: auto;
+    }
+}
+
+
 ::selection {
     background-color: rgba(245, 245, 245, 0.75);
     color: rgb(80, 80, 80);
@@ -59,9 +66,8 @@ main {
 
 
 article {
-    display: inline-block;
-    width: 48%;
-    margin: 50px;
+    margin-block: 50px;
+    transition: ease all 5s;
 }
 
 #nav1,
@@ -177,20 +183,19 @@ aside>h4 {
 }
 
 /* ARREGLAR EL ESTAR EN EL MEDIO DE LA PANTALLA */
-
+#container1,
 #containers {
     text-align: center;
     overflow: hidden;
     width: 600px;
     padding: 100px;
-    
     border-radius: 100px;
     background-color: rgba(255, 255, 255, 0.8);
     transition: all 0.5s cubic-bezier(0, 0, .5, 1);
     animation: aparecerContainers 0.5s forwards;
 }
 
-#containers:first-of-type {
+#container1 {
     margin-top: 115px;
 }
 
@@ -198,14 +203,14 @@ aside>h4 {
     margin-bottom: 150px;
 }
 
-#containers img,
+#container1 img, #containers img,
 figure {
     margin: 0;
     border-radius: 15px;
     user-select: none;
 }
 
-#containers:first-of-type.comprimido {
+#container1.comprimido {
     margin-top: 45px;
 }
 
