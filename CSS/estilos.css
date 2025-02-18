@@ -29,11 +29,7 @@ body {
     navigation: auto;
 }
 
-@media (max-width: 1750px) {
-    article {
-        margin-inline: auto;
-    }
-}
+
 
 
 ::selection {
@@ -60,14 +56,18 @@ body {
 }
 
 main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-size: 0;
     margin: 50px;
+    transition: all .5s ease;
 }
 
-
-article {
-    display: inline-block;
-    margin-block: 50px;
+@media (min-width: 100px) {
+    main {
+        display: block;
+    }
 }
 
 #nav1,
@@ -182,9 +182,10 @@ aside>h4 {
     margin: 0;
 }
 
-/* ARREGLAR EL ESTAR EN EL MEDIO DE LA PANTALLA */
 #container1,
 #containers {
+    margin: 50px;
+    display: inline-block;
     text-align: center;
     overflow: hidden;
     width: 600px;
@@ -196,14 +197,15 @@ aside>h4 {
 }
 
 #container1 {
-    margin-top: 115px;
+    margin-top: 50px;
 }
 
 #containers:last-of-type {
     margin-bottom: 150px;
 }
 
-#container1 img, #containers img,
+#container1 img,
+#containers img,
 figure {
     margin: 0;
     border-radius: 15px;
@@ -211,7 +213,7 @@ figure {
 }
 
 #container1.comprimido {
-    margin-top: 45px;
+    margin-top: 0px;
 }
 
 .artOculto {
