@@ -31,7 +31,6 @@ body {
 
 @media (max-width: 1750px) {
     article {
-        display: inline-block;
         margin-inline: auto;
     }
 }
@@ -67,8 +66,8 @@ main {
 
 
 article {
+    display: inline-block;
     margin-block: 50px;
-    transition: margin-inline 5s;
 }
 
 #nav1,
