@@ -56,7 +56,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 50px;
+    margin-inline: 50px;
 }
 
 @media screen and (min-width: 1922px) {
@@ -70,6 +70,7 @@ main {
     0% {
         transform: translateY(-100px);
     }
+
     100% {
         transform: translateY(0px);
     }
@@ -189,20 +190,20 @@ aside>h4 {
 
 #container1,
 #containers {
-    margin: 50px;
     display: inline-block;
     text-align: center;
     overflow: hidden;
     width: 600px;
-    padding: 100px;
+    padding: 75px;
     border-radius: 100px;
     background-color: rgba(255, 255, 255, 0.8);
     transition: all 0.5s cubic-bezier(0, 0, .5, 1);
     animation: aparecerContainers 0.5s forwards;
+    margin-bottom: 65px;
 }
 
 #container1 {
-    margin-top: 50px;
+    margin-top: 100px;
 }
 
 #containers:last-of-type {
@@ -218,7 +219,7 @@ figure {
 }
 
 #container1.comprimido {
-    margin-top: 0px;
+    margin-top: 45px;
 }
 
 .artOculto {
@@ -282,4 +283,48 @@ figure {
 #footerMain box-icon.subir {
     width: 35px;
     height: 35px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 2 auto;
+    gap: 5px;
+    margin-block: 50px;
+}
+
+.izq {
+    grid-column: 1;
+    text-align: right;
+    margin-right: 15px;
+}
+
+.der {
+    grid-column: 2;
+}
+
+/* CAMBIAR INPUTS Y DEMAS POR OTRO PORQUE CAMBIA OTROS (EJ FORM > INPUT) */
+form input,
+form .enviar,
+form select,
+form textarea {
+    border: 1px solid rgb(136, 136, 136);
+    background-color: rgb(255, 255, 255);
+    color: rgb(116, 116, 116);
+    border-radius: 10px;
+    font-family: "Nunito";
+    
+}
+
+form textarea {
+    min-width: 280px;
+    max-width: 280px;
+    max-height: 100px;
+}
+
+form .terminos,
+form .enviar {
+    cursor: pointer;
+    user-select: none;
+    grid-column: 1 / span 2;
+    margin: 0 auto;
 }

@@ -16,7 +16,7 @@ function navBajar() {
 
 // Funcion para mostrar el boton de subir desde el fondo de la página
 function mostrarFlecha() {
-  let bajando = window.scrollY > 200;
+  let bajando = window.scrollY > 225;
   const footer = document.getElementById("footerMain");
   const imagen = document.getElementById("boxicon");
 

@@ -18,23 +18,61 @@
             <button id="botonNav" onclick="navBajar()"><img src="../IMG/flechaabajo.svg" alt="flecha abajo" draggable="false"></button>
         </nav>
     </header>
-    <aside>
-        <h4>Ricardo Kraus</h4>
-    </aside>
     <main>
         <article id="container1" class="artOculto">
             <h1>Contacto</h1>
             <form action="/submit" method="post">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
+                <label for="nombre" class="izq">Nombre Completo:</label>
+                <input type="text" id="nombre" name="nombre" class="der" required>
+                <br>
                 
-                <label for="email">Correo electrónico:</label>
-                <input type="email" id="email" name="email" required>
+                <label for="email" class="izq">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" class="der" required>
+                <br>
                 
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" required></textarea>
+                <label for="telefono" class="izq">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" class="der" required>
+                <br>
                 
-                <button type="submit">Enviar</button>
+                <label for="empresa" class="izq">Empresa (opcional):</label>
+                <input type="text" id="empresa" name="empresa" class="der">
+                <br>
+                
+                <label for="servicio" class="izq">Servicio de Interés:</label>
+                <select id="servicio" name="servicio" class="der" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="diseño_web">Diseño Web</option>
+                    <option value="desarrollo_app">Desarrollo de Aplicaciones</option>
+                    <option value="seo">SEO y Marketing Digital</option>
+                    <option value="otros">Otros</option>
+                </select>
+                <br>
+                
+                <label for="presupuesto" class="izq">Presupuesto Aproximado:</label>
+                <input type="number" id="presupuesto" name="presupuesto" placeholder="Ej. 1000€" min="0" class="der">
+                <br>
+                
+                <label for="plazo" class="izq">Plazo de Entrega Deseado:</label>
+                <input type="date" id="plazo" name="plazo" class="der">
+                <br>
+                
+                <label for="preferencia_contacto" class="izq">Preferencia de Contacto:</label>
+                <select id="preferencia_contacto" name="preferencia_contacto" class="der" required>
+                    <option value="email">Correo Electrónico</option>
+                    <option value="telefono">Teléfono</option>
+                    <option value="whatsapp">WhatsApp</option>
+                </select>
+                <br>
+                <label for="mensaje" class="izq">Mensaje o Detalles del Proyecto:</label>
+                <textarea id="mensaje" name="mensaje" rows="2" class="der" required></textarea>
+                <br>
+                
+                <label class="terminos">
+                    <input type="checkbox" id="terminos" name="terminos" required>
+                    Acepto los términos y condiciones
+                </label>
+                <br>
+                <button type="submit" class="enviar">Enviar</button>
             </form>
         </article>
     </main>
