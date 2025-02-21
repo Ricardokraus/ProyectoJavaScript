@@ -2,10 +2,11 @@
 function navBajar() {
   const boton = document.getElementById("botonNav");
   const nav = document.getElementById("nav");
+  const header = document.getElementById("header");
   let container = document.getElementById("container1");
 
   let navOculto = boton.classList.contains("navOculto");
-  [boton, nav].forEach(elementos => elementos.classList.toggle("navOculto", !navOculto));
+  [boton, nav, header].forEach(elementos => elementos.classList.toggle("navOculto", !navOculto));
 
   if (!navOculto) {
     container.classList.add("comprimido");

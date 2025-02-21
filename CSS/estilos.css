@@ -65,6 +65,20 @@ main {
     }
 }
 
+header {
+    font-family: monospace;
+    position: absolute;
+    font-size: 15px;
+    top: 15px;
+    left: 2.5%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(7.5px);
+    width: fit-content;
+    border-radius: 25px;
+    transition: all 0.2s cubic-bezier(0, 0, .5, 1);
+}
+
 #nav,
 #nav.navOculto {
     backdrop-filter: blur(7.5px);
@@ -91,12 +105,17 @@ main {
     border-radius: 0 0 65px 65px;
 }
 
-@media (max-width: 950px) {
-    #nav, #nav.navOculto {
-        left: 50%;
-        transform: translateX(-30%);
+@media (max-width: 1450px) {
+    header {
+        position: relative;
+        top: 85px;
+        left: 2.5%;
+        margin-block: 10px;
     }
-    
+
+    header.navOculto {
+        top: 35px;
+    } 
 }
 
 #nav a,
@@ -107,7 +126,6 @@ main {
     color: #313131;
     font-weight: bold;
     padding-inline: 25px;
-
     transition: all 0.3s cubic-bezier(0, 0, .25, 1), font-size 0.25s cubic-bezier(1, 0.5, .25, 1), opacity 0.1s cubic-bezier(0, 0, 0, 1), padding-inline 0.2s cubic-bezier(0, 0, 0, 1);
 }
 
@@ -209,9 +227,10 @@ aside>h4 {
 #container1 img,
 #containers img,
 figure {
-    margin: 0;
-    border-radius: 15px;
+    margin: 0 auto;
+    border-radius: 30px;
     user-select: none;
+    max-width: 350px;
 }
 
 #container1.comprimido {
