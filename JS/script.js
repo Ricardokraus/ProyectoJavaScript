@@ -10,8 +10,10 @@ function navBajar() {
 
   if (!navOculto) {
     container.classList.add("comprimido");
+    header.classList.add("comprimido")
   } else {
     container.classList.remove("comprimido");
+    header.classList.remove("comprimido")
   }
 }
 
@@ -60,7 +62,7 @@ elementosOcultos.forEach((elementos) => observer.observe(elementos));
 // Funcion para hacer aparecer la barra de scroll si la altura del contenido de la página supera un tamaño
 function ajustarOverflow() {
   let alturaPag = document.documentElement.scrollHeight;
-  if (alturaPag > 1000) {
+  if (alturaPag > 1100) {
     document.body.style.overflow = "auto";
   } else {
     document.body.style.overflow = "hidden";

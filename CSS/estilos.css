@@ -72,11 +72,28 @@ header {
     top: 15px;
     left: 2.5%;
     padding: 10px;
-    background-color: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(7.5px);
+    background-color: rgba(255, 255, 255, 0.8);
     width: fit-content;
     border-radius: 25px;
-    transition: all 0.2s cubic-bezier(0, 0, .5, 1);
+    transition: all 0.2s cubic-bezier(0, 0, .5, 1), left 0.25s cubic-bezier(0, 0, .5, 1);
+}
+
+@media (max-width: 1450px) {
+    header {
+        position: relative;
+        top: 82.5px;
+        left: 2.5%;
+        margin-block: 10px;
+    }
+
+    header.navOculto {
+        top: 35px;
+    }
+
+    header.comprimido {
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
 #nav,
@@ -105,32 +122,19 @@ header {
     border-radius: 0 0 65px 65px;
 }
 
-@media (max-width: 1450px) {
-    header {
-        position: relative;
-        top: 85px;
-        left: 2.5%;
-        margin-block: 10px;
-    }
-
-    header.navOculto {
-        top: 35px;
-    } 
-}
-
 #nav a,
 #nav.navOculto a {
     grid-row: 2;
     text-align: center;
     text-decoration: none;
-    color: #313131;
+    color: rgba(0, 0, 0, 0.5);
     font-weight: bold;
     padding-inline: 25px;
     transition: all 0.3s cubic-bezier(0, 0, .25, 1), font-size 0.25s cubic-bezier(1, 0.5, .25, 1), opacity 0.1s cubic-bezier(0, 0, 0, 1), padding-inline 0.2s cubic-bezier(0, 0, 0, 1);
 }
 
 #nav a {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     opacity: 1;
     margin-top: 50px;
 }
@@ -145,8 +149,9 @@ header {
 }
 
 #nav a:hover {
-    transform: scale(1.1);
+    transform: scale(1.25);
     transition-delay: 0.1s;
+    color: rgba(0, 0, 0, 0.8);
 }
 
 #nav.navOculto a:hover {
@@ -161,7 +166,8 @@ header {
     background: transparent;
     border: none;
     padding: 0;
-    transition: transform 0.2s cubic-bezier(0, .7, .9, .9);
+    color: rgba(0, 0, 0, 0.5);
+    transition: all 0.2s cubic-bezier(0, .7, .9, .9);
 }
 
 #botonNav {
@@ -179,7 +185,8 @@ header {
 }
 
 #botonNav:hover {
-    transform: translate(-50%, 150%) rotate(180deg) scale(1.2);
+    color: rgba(0, 0, 0, 0.8);
+    transform: translate(-50%, 150%) rotate(180deg) scale(1.1);
 }
 
 #botonNav.navOculto:hover {
@@ -234,7 +241,7 @@ figure {
 }
 
 #container1.comprimido {
-    margin-top: 45px;
+    margin-top: 50px;
 }
 
 .artOculto {
@@ -331,11 +338,11 @@ form textarea {
     font-family: "Nunito";
     padding-block: 2px;
     padding-inline: 10px;
-    
+
 }
 
 form textarea {
-    resize: none;    
+    resize: none;
     height: 75px;
 }
 
