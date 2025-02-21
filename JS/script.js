@@ -1,7 +1,7 @@
 // Funcion para que suba y baje el nav y que tambien el container1 tenga un margen continuo entre el nav
 function navBajar() {
   const boton = document.getElementById("botonNav");
-  const nav = document.getElementById("nav1");
+  const nav = document.getElementById("nav");
   let container = document.getElementById("container1");
 
   let navOculto = boton.classList.contains("navOculto");
@@ -55,18 +55,18 @@ elementosOcultos.forEach((elementos) => observer.observe(elementos));
 
 
 
+
+// Funcion para hacer aparecer la barra de scroll si la altura del contenido de la página supera un tamaño
 function ajustarOverflow() {
-  let alturaPag = document.documentElement.scrollHeight; // Altura total del contenido
+  let alturaPag = document.documentElement.scrollHeight;
   if (alturaPag > 1000) {
     document.body.style.overflow = "auto";
   } else {
     document.body.style.overflow = "hidden";
   }
 }
-
 // Ejecutar al cargar la página
 ajustarOverflow();
-
 // Aplicar también cuando el contenido cambie
 window.addEventListener("resize", ajustarOverflow);
 
