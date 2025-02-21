@@ -17,7 +17,7 @@ function navBajar() {
 // Funcion para mostrar el boton de subir desde el fondo de la página
 function mostrarFlecha() {
   let bajando = window.scrollY > 225;
-  const footer = document.getElementById("footerMain");
+  const footer = document.getElementById("flechaSubir");
   const imagen = document.getElementById("boxicon");
 
   if (bajando) {
@@ -32,7 +32,7 @@ window.addEventListener("scroll", mostrarFlecha);
 
 
 function subirArriba() {
-  const boton = document.getElementById("footerMain");
+  const boton = document.getElementById("flechaSubir");
   if (boton.classList.contains("subir")) {
     window.scrollTo({ top: 0 });
   }
@@ -52,3 +52,21 @@ const observer = new IntersectionObserver((entries) => {
 
 const elementosOcultos = document.querySelectorAll('.artOculto');
 elementosOcultos.forEach((elementos) => observer.observe(elementos));
+
+
+
+function ajustarOverflow() {
+  let alturaPag = document.documentElement.scrollHeight; // Altura total del contenido
+  if (alturaPag > 1000) {
+    document.body.style.overflow = "auto";
+  } else {
+    document.body.style.overflow = "hidden";
+  }
+}
+
+// Ejecutar al cargar la página
+ajustarOverflow();
+
+// Aplicar también cuando el contenido cambie
+window.addEventListener("resize", ajustarOverflow);
+

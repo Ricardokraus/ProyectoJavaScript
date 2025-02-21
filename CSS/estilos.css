@@ -5,7 +5,7 @@ html {
 body {
     margin: 0;
     font-family: "Nunito";
-    min-height: 1250px;
+    min-height: 1000px;
     position: relative;
     background: linear-gradient(180deg, #e0f7ff 0%, #ccefff 10%, #99dfff 20%, #66cfff 30%, #33bfff 40%, #00afff 50%, #0099e6 60%, #007fcc 70%, #0055b2 80%, #002d99 90%, #001a33 100%);
     animation: aparecer 1s ease-out forwards;
@@ -30,8 +30,8 @@ body {
 }
 
 ::selection {
-    background-color: rgba(245, 245, 245, 0.75);
-    color: rgb(80, 80, 80);
+    background-color: rgb(54, 163, 206);
+    color: rgb(255, 255, 255);
 }
 
 ::-webkit-scrollbar {
@@ -62,17 +62,6 @@ main {
 @media screen and (min-width: 1922px) {
     main {
         display: inline-block;
-        animation: media 1s;
-    }
-}
-
-@keyframes media {
-    0% {
-        transform: translateY(-100px);
-    }
-
-    100% {
-        transform: translateY(0px);
     }
 }
 
@@ -233,7 +222,7 @@ figure {
     opacity: 1;
 }
 
-#footerMain {
+#flechaSubir {
     backdrop-filter: blur(7.5px);
     background-color: rgba(116, 116, 116, 0.25);
     border-radius: 100%;
@@ -250,7 +239,7 @@ figure {
     animation: subeBaja 2.5s ease-out infinite;
 }
 
-#footerMain:hover {
+#flechaSubir:hover {
     animation: subeBaja 1.5s ease-out infinite;
 }
 
@@ -268,27 +257,27 @@ figure {
     }
 }
 
-#footerMain.subir {
+#flechaSubir.subir {
     bottom: 50px;
     height: 35px;
     pointer-events: all;
 }
 
-#footerMain box-icon {
+#flechaSubir box-icon {
     width: 0px;
     height: 0px;
     transition: all .5s cubic-bezier(.6, 0, 0, 1);
 }
 
-#footerMain box-icon.subir {
+#flechaSubir box-icon.subir {
     width: 35px;
     height: 35px;
 }
 
 form {
     display: grid;
-    grid-template-columns: 2 auto;
-    gap: 5px;
+    grid-template-columns: 2;
+    gap: 30px;
     margin-block: 50px;
 }
 
@@ -296,10 +285,12 @@ form {
     grid-column: 1;
     text-align: right;
     margin-right: 15px;
+    width: 250px;
 }
 
 .der {
     grid-column: 2;
+    width: 250px;
 }
 
 /* CAMBIAR INPUTS Y DEMAS POR OTRO PORQUE CAMBIA OTROS (EJ FORM > INPUT) */
@@ -307,18 +298,19 @@ form input,
 form .enviar,
 form select,
 form textarea {
-    border: 1px solid rgb(136, 136, 136);
+    border: 1px solid rgb(173, 173, 173);
     background-color: rgb(255, 255, 255);
     color: rgb(116, 116, 116);
     border-radius: 10px;
     font-family: "Nunito";
+    padding-block: 2px;
+    padding-inline: 10px;
     
 }
 
 form textarea {
-    min-width: 280px;
-    max-width: 280px;
-    max-height: 100px;
+    resize: none;    
+    height: 75px;
 }
 
 form .terminos,
