@@ -193,10 +193,8 @@ aside > p {
 
 #container1,
 #containers {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    display: block;
+    text-align: center;
     overflow: hidden;
     width: 800px;
     min-height: 300px;
@@ -211,6 +209,12 @@ aside > p {
 
 #containers:last-of-type {
     margin-bottom: 150px;
+}
+
+#container1 ul,
+#containers ul {
+    display: inline-block;
+    text-align: left;
 }
 
 #container1 img,
@@ -291,23 +295,24 @@ figure {
     height: 35px;
 }
 
-form {
+form { 
     display: grid;
     grid-template-columns: 2;
     gap: 30px;
-    margin-block: 50px;
 }
 
 .izq {
     grid-column: 1;
     text-align: right;
     margin-right: 15px;
-    width: 250px;
+    width: 95%;
+    font-family: Arial;
 }
 
 .der {
     grid-column: 2;
-    width: 250px;
+    margin-right: 100px;
+    font-family: Arial;
 }
 
 
@@ -332,6 +337,7 @@ form textarea {
 
 form .terminos,
 form .enviar {
+    font-family: Arial;
     cursor: pointer;
     user-select: none;
     grid-column: 1 / span 2;
