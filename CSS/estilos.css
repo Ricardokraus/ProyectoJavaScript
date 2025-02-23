@@ -4,8 +4,7 @@ html {
 
 body {
     margin: 0;
-    font-family: "Nunito";
-    min-height: 1000px;
+    font-family: 'Arial Narrow', Arial, sans-serif;
     position: relative;
     background: linear-gradient(180deg, #e0f7ff 0%, #ccefff 10%, #99dfff 20%, #66cfff 30%, #33bfff 40%, #00afff 50%, #0099e6 60%, #007fcc 70%, #0055b2 80%, #002d99 90%, #001a33 100%);
     animation: aparecer 1s ease-out forwards;
@@ -57,12 +56,6 @@ main {
     flex-direction: column;
     align-items: center;
     margin-inline: 50px;
-}
-
-@media screen and (min-width: 1922px) {
-    main {
-        display: inline-block;
-    }
 }
 
 header {
@@ -358,4 +351,13 @@ form .enviar {
     #container1.comprimido {
         margin-top: 50px;
     }
+}
+
+
+#lista {
+    list-style: inside;
+    padding: 0;
+    text-align: center;
+    line-height: 40px;
+    font-weight: bold;
 }

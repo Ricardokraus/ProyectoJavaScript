@@ -19,7 +19,7 @@ function navBajar() {
 
 // Funcion para mostrar el boton de subir desde el fondo de la página
 function mostrarFlecha() {
-  let bajando = window.scrollY > 225;
+  let bajando = window.scrollY > 50;
   const footer = document.getElementById("flechaSubir");
   const imagen = document.getElementById("boxicon");
 
@@ -33,7 +33,7 @@ function mostrarFlecha() {
 }
 window.addEventListener("scroll", mostrarFlecha);
 
-
+// Funcion para que al hacer click en el boton de subir, se suba a la parte superior de la página
 function subirArriba() {
   const boton = document.getElementById("flechaSubir");
   if (boton.classList.contains("subir")) {
@@ -41,20 +41,26 @@ function subirArriba() {
   }
 }
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("artEnseñar");
-      entry.target.classList.remove("artOculto");
-    } else {
-      entry.target.classList.add("artOculto");
-      entry.target.classList.remove("artEnseñar");
-    }
+// Funcion para detectar el tamaño de la pantalla y aplicar estilos de aparicion de articulos con animacion
+function iniciarObserver() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("artEnseñar");
+        entry.target.classList.remove("artOculto");
+      } else {
+        entry.target.classList.add("artOculto");
+        entry.target.classList.remove("artEnseñar");
+      }
+    });
   });
-});
 
-const elementosOcultos = document.querySelectorAll('.artOculto');
-elementosOcultos.forEach((elementos) => observer.observe(elementos));
+  const elementosOcultos = document.querySelectorAll('.artOculto');
+  elementosOcultos.forEach((elemento) => observer.observe(elemento));
+}
+
+// Llamar a la función para activarlo
+iniciarObserver();
 
 
 
@@ -73,3 +79,14 @@ ajustarOverflow();
 // Aplicar también cuando el contenido cambie
 window.addEventListener("resize", ajustarOverflow);
 
+
+// Funcion para declarar altura minima de la pagina para que el fondo tenga un degradado a corde con la altura de la pantalla
+function setMinHeight() {
+  document.body.style.minHeight = window.innerHeight + 'px';
+}
+
+// Ejecutar al cargar la página
+document.addEventListener('DOMContentLoaded', setMinHeight);
+
+// Ajustar cuando se cambia el tamaño de la ventana
+window.addEventListener('resize', setMinHeight);
