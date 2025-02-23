@@ -56,6 +56,7 @@ main {
     flex-direction: column;
     align-items: center;
     margin-inline: 50px;
+    margin-block: 25px;
 }
 
 header {
@@ -175,33 +176,37 @@ aside {
     top: 50%;
     transform: translateY(-50%);
     margin: 0;
-    padding-inline: 20px;
+    padding-inline: 25px;
     writing-mode: sideways-lr;
     border-radius: 0 75px 75px 0;
     background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(7.5px);
 }
 
-aside>h4 {
+aside > p {
     margin: 0;
+    font-weight: bold;
+    font-size: large;
+    padding-block: 10px;
 }
+
 
 #container1,
 #containers {
-    display: inline-block;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
-    width: 600px;
-    padding: 75px;
+    width: 800px;
+    min-height: 300px;
+    padding: 50px;
+    margin-inline: 50px;
     border-radius: 100px;
     background-color: rgba(255, 255, 255, 0.8);
     transition: all 0.5s cubic-bezier(0, 0, .5, 1);
     animation: aparecerContainers 0.5s forwards;
     margin-bottom: 65px;
-}
-
-#container1 {
-    margin-top: 0px;
 }
 
 #containers:last-of-type {
@@ -211,10 +216,12 @@ aside>h4 {
 #container1 img,
 #containers img,
 figure {
-    margin: 0 auto;
+    display: inline-block;
+    vertical-align: middle;
     border-radius: 30px;
     user-select: none;
-    max-width: 350px;
+    max-width: 500px;
+    max-height: 350px;
 }
 
 #container1.comprimido {
@@ -303,7 +310,7 @@ form {
     width: 250px;
 }
 
-/* CAMBIAR INPUTS Y DEMAS POR OTRO PORQUE CAMBIA OTROS (EJ FORM > INPUT) */
+
 form input,
 form .enviar,
 form select,
@@ -331,7 +338,7 @@ form .enviar {
     margin: 0 auto;
 }
 
-@media (max-width: 1550px) {
+@media (max-width: 1650px) {
     header {
         top: 82.5px;
         left: 2.5%;
@@ -339,7 +346,7 @@ form .enviar {
     }
 
     header.navOculto {
-        top: 35px;
+        top: 42.5px;
     }
 
     header.comprimido {
